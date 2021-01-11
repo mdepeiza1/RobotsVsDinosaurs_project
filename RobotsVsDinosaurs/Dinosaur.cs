@@ -24,6 +24,7 @@ namespace RobotsVsDinosaurs
         public void attackRobot(Robot robot)
         {
             robot.health -= this.attackPower;
+            this.energy -= 10;
         }
     }
 }
