@@ -8,5 +8,11 @@ namespace RobotsVsDinosaurs
 {
     class Herd
     {
+        List<Dinosaur> herd;
+
+          public  Herd()
+        {
+            herd = new List<Dinosaur>();
+        }
     }
 }
