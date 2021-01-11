@@ -8,10 +8,10 @@ namespace RobotsVsDinosaurs
 {
     class Dinosaur
     {
-        string type;
-        int health;
-        int energy;
-        int attackPower;
+        public string type;
+        public int health;
+        public int energy;
+        public int attackPower;
 
         public Dinosaur(string type, int health, int energy, int attackPower)
         {
@@ -23,7 +23,7 @@ namespace RobotsVsDinosaurs
 
         public void attackRobot(Robot robot)
         {
-
+            robot.health -= this.attackPower;
         }
     }
 }
