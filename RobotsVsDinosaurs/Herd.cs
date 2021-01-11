@@ -14,5 +14,10 @@ namespace RobotsVsDinosaurs
         {
             herd = new List<Dinosaur>();
         }
+
+        public void addDinosaurToHerd(Dinosaur dinosaur)
+        {
+            herd.Add(dinosaur);
+        }
     }
 }

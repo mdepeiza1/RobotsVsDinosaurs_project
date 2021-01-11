@@ -14,5 +14,10 @@ namespace RobotsVsDinosaurs
         {
             fleet = new List<Robot>();
         }
+
+        public void addRobotToFleet(Robot robot)
+        {
+            fleet.Add(robot);
+        }
     }
 }
