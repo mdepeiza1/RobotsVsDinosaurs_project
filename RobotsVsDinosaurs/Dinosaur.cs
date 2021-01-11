@@ -12,5 +12,13 @@ namespace RobotsVsDinosaurs
         int health;
         int energy;
         int attackPower;
+
+        public Dinosaur(string type, int health, int energy, int attackPower)
+        {
+            this.type = type;
+            this.health = health;
+            this.energy = energy;
+            this.attackPower = attackPower;
+        }
     }
 }

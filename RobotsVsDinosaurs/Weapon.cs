@@ -10,5 +10,19 @@ namespace RobotsVsDinosaurs
     {
         string type;
         int attackPower;
+
+        public Weapon(string type)
+        {
+            this.type = type;
+
+            if(type == "Gun")
+            {
+                attackPower = 30;
+            }
+            if(type == "Sword")
+            {
+                attackPower = 15;
+            }
+        }
     }
 }
