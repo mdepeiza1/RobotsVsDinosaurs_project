@@ -8,16 +8,30 @@ namespace RobotsVsDinosaurs
 {
     class Battlefield
     {
-        Herd herd = new Herd();
-        Fleet fleet = new Fleet();
+        public Battlefield()
+        {
+            Fleet fleet = new Fleet();
+            Herd herd = new Herd();
 
-        Robot robot1 = new Robot("Glide", 100, 100, "Sword");
-        Robot robot2 = new Robot("Grind", 100, 100, "Sword");
-        Robot robot3 = new Robot("Delete", 100, 100, "Gun");
+            Weapon weapon1 = new Weapon("Gun", 30);
+            Weapon weapon2 = new Weapon("Sword", 15);
 
-        Dinosaur dinosaur1 = new Dinosaur("T-Rex", 100, 100, 20);
-        Dinosaur dinosaur2 = new Dinosaur("Stegosaurus", 100, 100, 10);
-        Dinosaur dinosaur3 = new Dinosaur("Pterodactyl", 100, 100, 5);
+            Robot robot1 = new Robot("Glide", 100, 100, weapon2);
+            Robot robot2 = new Robot("Grind", 100, 100, weapon2);
+            Robot robot3 = new Robot("Delete", 100, 100, weapon1);
 
+            Dinosaur dinosaur1 = new Dinosaur("T-Rex", 100, 100, 20);
+            Dinosaur dinosaur2 = new Dinosaur("Stegosaurus", 100, 100, 10);
+            Dinosaur dinosaur3 = new Dinosaur("Pterodactyl", 100, 100, 5);
+
+            fleet.addRobotToFleet(robot1);
+            fleet.addRobotToFleet(robot2);
+            fleet.addRobotToFleet(robot3);
+
+            herd.addDinosaurToHerd(dinosaur1);
+            herd.addDinosaurToHerd(dinosaur2);
+            herd.addDinosaurToHerd(dinosaur3);
+
+        }
     }
 }

@@ -20,5 +20,10 @@ namespace RobotsVsDinosaurs
             this.energy = energy;
             this.attackPower = attackPower;
         }
+
+        public void attackRobot(Robot robot)
+        {
+
+        }
     }
 }
