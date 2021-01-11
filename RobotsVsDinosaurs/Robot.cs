@@ -13,13 +13,12 @@ namespace RobotsVsDinosaurs
         public int powerLevel;
         public Weapon weapon;
 
-        public Robot(string name, int health, int powerLevel, Weapon weapon) 
+        public Robot(string name, int health, int powerLevel) 
             //string weaponChoice)
         {
             this.name = name;
             this.health = health;
             this.powerLevel = powerLevel;
-            this.weapon = weapon;
 
             //if (weaponChoice == "Gun")
             //{
@@ -32,7 +31,12 @@ namespace RobotsVsDinosaurs
             //}
         }
 
-        public void attackDinosaur(Dinosaur dinosaur)
+        public void CreateWeapon(string type, int attackPower)
+        {
+            weapon = new Weapon(type, attackPower);
+        }
+
+        public void AttackDinosaur(Dinosaur dinosaur)
         {
                 dinosaur.health -= this.weapon.attackPower;
                 this.powerLevel -= 10;

@@ -8,14 +8,25 @@ namespace RobotsVsDinosaurs
 {
     class Herd
     {
-        List<Dinosaur> herd;
+        public List<Dinosaur> herd;
+        public Dinosaur dinosaur;
 
           public  Herd()
         {
             herd = new List<Dinosaur>();
         }
 
-        public void addDinosaurToHerd(Dinosaur dinosaur)
+        public Dinosaur CreateDinosaur(string type, int health, int energy, int attackPower)
+        {
+            return dinosaur = new Dinosaur(type, health, energy, attackPower);
+        }
+
+        public Dinosaur ElementAt(int i)
+        {
+            return herd.ElementAt(i);
+        }
+
+        public void AddDinosaurToHerd(Dinosaur dinosaur)
         {
             herd.Add(dinosaur);
         }
