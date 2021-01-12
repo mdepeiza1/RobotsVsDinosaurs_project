@@ -17,13 +17,13 @@ namespace RobotsVsDinosaurs
         {
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Glide", 100, 100));
-            fleet.ElementAt(0).ChooseWeapon(0);
+            fleet.ElementAt(0).ChooseWeapon();
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Grind", 100, 100));
-            fleet.ElementAt(1).ChooseWeapon(0);
+            fleet.ElementAt(1).ChooseWeapon();
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Delete", 100, 100));
-            fleet.ElementAt(2).ChooseWeapon(1);
+            fleet.ElementAt(2).ChooseWeapon();
 
             herd.AddDinosaurToHerd(herd.CreateDinosaur("T-Rex", 100, 100, 20));
             herd.AddDinosaurToHerd(herd.CreateDinosaur("Stegosaurus", 100, 100, 10));

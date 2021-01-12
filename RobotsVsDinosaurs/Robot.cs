@@ -38,9 +38,11 @@ namespace RobotsVsDinosaurs
             weapon = new Weapon(type, attackPower);
         }
 
-        public void ChooseWeapon(int i)
+        public void ChooseWeapon()
         {
-            weapon = weaponList.ElementAt(i);
+            Console.WriteLine("Please choose a weapon for " + this.name + ". 1 is a gun. 2 is a sword.");
+            int i = Int32.Parse(Console.ReadLine());
+            weapon = weaponList.ElementAt(i-1);
         }
 
         public void AttackDinosaur(Dinosaur dinosaur)

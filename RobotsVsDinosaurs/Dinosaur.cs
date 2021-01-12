@@ -26,7 +26,7 @@ namespace RobotsVsDinosaurs
 
         public void AttackRobot(Robot robot)
         {
-            Console.WriteLine("Please choose attack type. Choose by using a number. " +
+            Console.WriteLine("Please choose attack type for the " + this.type + ". Choose by using a number. " +
                 "1 is bite. 2 is tail strike. 3 is headbutt.");
             attackType = Int32.Parse(Console.ReadLine());
             attackPower = attackTypeArray.GetValue(attackType-1);
