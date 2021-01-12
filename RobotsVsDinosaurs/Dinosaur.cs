@@ -32,6 +32,7 @@ namespace RobotsVsDinosaurs
             attackPower = attackTypeArray.GetValue(attackType-1);
             robot.health -= this.attackPower;
             this.energy -= 10;
+            Console.WriteLine(robot.name + "'s health is now " + robot.health + ".");
         }
     }
 }

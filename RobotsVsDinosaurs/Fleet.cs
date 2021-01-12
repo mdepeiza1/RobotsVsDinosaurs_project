@@ -14,6 +14,17 @@ namespace RobotsVsDinosaurs
         public Fleet()
         {
             fleet = new List<Robot>();
+            robot = new Robot("Glide", 100, 100);
+            robot.ChooseWeapon();
+            fleet.Add(robot);
+
+            robot = new Robot("Grind", 100, 100);
+            robot.ChooseWeapon();
+            fleet.Add(robot);
+
+            robot = new Robot("Delete", 100, 100);
+            robot.ChooseWeapon();
+            fleet.Add(robot);
         }
 
         public Robot CreateRobot(string name, int health, int powerLevel)

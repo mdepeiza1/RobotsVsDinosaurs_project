@@ -49,6 +49,7 @@ namespace RobotsVsDinosaurs
         {
                 dinosaur.health -= this.weapon.attackPower;
                 this.powerLevel -= 10;
+            Console.WriteLine(dinosaur.type + "'s health is now " + dinosaur.health + ".");
         }
     }
 }
