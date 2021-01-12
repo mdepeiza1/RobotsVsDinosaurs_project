@@ -12,13 +12,15 @@ namespace RobotsVsDinosaurs
         public int health;
         public int powerLevel;
         public Weapon weapon;
+        public WeaponList weaponList;
 
-        public Robot(string name, int health, int powerLevel) 
-            //string weaponChoice)
+        public Robot(string name, int health, int powerLevel)
+        //string weaponChoice)
         {
             this.name = name;
             this.health = health;
             this.powerLevel = powerLevel;
+            weaponList = new WeaponList();
 
             //if (weaponChoice == "Gun")
             //{
@@ -34,6 +36,11 @@ namespace RobotsVsDinosaurs
         public void CreateWeapon(string type, int attackPower)
         {
             weapon = new Weapon(type, attackPower);
+        }
+
+        public void ChooseWeapon(int i)
+        {
+            weapon = weaponList.ElementAt(i);
         }
 
         public void AttackDinosaur(Dinosaur dinosaur)

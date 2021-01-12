@@ -12,19 +12,20 @@ namespace RobotsVsDinosaurs
         // access modifiers
         public Fleet fleet = new Fleet();
         public Herd herd = new Herd(); // use the constructor to instantiate
-
+        public List<Weapon> weaponList = new List<Weapon>();
+        public int[] attackTypeArray = new int[3];
         // constructor
         public Battlefield()
         {
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Glide", 100, 100));
-            fleet.ElementAt(0).CreateWeapon("Sword", 15);
+            fleet.ElementAt(0).ChooseWeapon(0);
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Grind", 100, 100));
-            fleet.ElementAt(1).CreateWeapon("Sword", 15);
+            fleet.ElementAt(1).ChooseWeapon(0);
 
             fleet.AddRobotToFleet(fleet.CreateRobot("Delete", 100, 100));
-            fleet.ElementAt(2).CreateWeapon("Gun", 30);
+            fleet.ElementAt(2).ChooseWeapon(1);
 
             herd.AddDinosaurToHerd(herd.CreateDinosaur("T-Rex", 100, 100, 20));
             herd.AddDinosaurToHerd(herd.CreateDinosaur("Stegosaurus", 100, 100, 10));
