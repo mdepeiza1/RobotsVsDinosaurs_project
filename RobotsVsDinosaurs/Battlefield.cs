@@ -12,8 +12,6 @@ namespace RobotsVsDinosaurs
         // access modifiers
         public Fleet fleet = new Fleet();
         public Herd herd = new Herd(); // use the constructor to instantiate
-        public List<Weapon> weaponList = new List<Weapon>();
-        public int[] attackTypeArray = new int[3];
         // constructor
         public Battlefield()
         {
